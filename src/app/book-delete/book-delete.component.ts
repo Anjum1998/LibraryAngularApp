@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class BookDeleteComponent {
 
+  title=""
+
+  readValue=()=>
+  {
+    let data:any= {
+      "title":this.title
+    }
+    console.log(data)
+  }
+
 }
