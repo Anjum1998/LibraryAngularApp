@@ -19,9 +19,11 @@ constructor(private router:Router){}
     }
     console.log(data)
 
-    if (this.username=="admin"&& this.password=="12345") {
+    if (this.username=="admin"&& this.password=="12345")
+     {
       this.router.navigate(['/view'])
-  } else {
+    } 
+    else {
       alert("invalid credentials")
   }
   }
