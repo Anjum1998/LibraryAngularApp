@@ -41,6 +41,15 @@ constructor(private api:ApiService){}
         console.log(response)
         if (response.status=="success") {
           alert("successfully added")
+          this.author=""
+          this.description=""
+          this.distributor=""
+          this.image=""
+          this.language=""
+          this.price=""
+          this.publisher=""
+          this.releaseyear=""
+          this.title=""
         } else {
           alert("something wrong!")
         }
