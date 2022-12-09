@@ -7,12 +7,28 @@
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
                     <label for="" class="form-label">Title</label>
-                    <input type="text" class="form-control">
+                    <input name="title" [(ngModel)]="title" type="text" class="form-control">
 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
-                    <button class="btn btn-success text-center">Search</button>
+                    <button (click)="readValue()" class="btn btn-success text-center">Search</button>
+
+                </div>
+            </div>
+            <div class="row g-3 m-4">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of searchData">
+
+                    <div class="card" >
+                        <img height="150px" width="150px" src={{i.image}} class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Book Name:{{i.title}}</h5>
+                        <p class="card-text">Author:{{i.author}}</p>
+                        <p class="card-text">Price:{{i.price}}</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                       
+                        </div>
+                    </div>
 
                 </div>
             </div>
