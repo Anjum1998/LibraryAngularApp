@@ -25,5 +25,9 @@ export class ApiService {
   {
     return this.http.post("http://localhost:8080/delete",dataTosend)
   }
+  addUser=(dataTosend:any)=>
+  {
+    return this.http.post("http://localhost:8080/register",dataTosend)
+  }
  
 }
