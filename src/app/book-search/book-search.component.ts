@@ -9,7 +9,7 @@ import { ApiService } from '../api.service';
 export class BookSearchComponent {
   title=""
 constructor(private api:ApiService){}
-searchData=[]
+searchData:any=[]
  
 
   readValue=()=>
@@ -26,6 +26,21 @@ searchData=[]
           alert("invalid booktitle")
         } else {
           this.searchData=response
+        }
+      }
+    )
+  }
+  deleteBtnClick=(id:any)=>
+  {
+    let data:any={"id":id}
+    this.api.deleteBook(data).subscribe(
+      (response:any)=>
+      {
+        console.log(response)
+        if (response.status=="success") {
+          alert("deleted successfully")
+        } else {
+          alert("can not delete")
         }
       }
     )
