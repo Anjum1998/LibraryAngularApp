@@ -17,6 +17,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarUserComponent } from './navbar-user/navbar-user.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -69,6 +70,7 @@ const myRoute:Routes=[
     BookDeleteComponent,
     BookIssueComponent,
     NavbarComponent,
+    NavbarUserComponent,
     
   ],
   imports: [
