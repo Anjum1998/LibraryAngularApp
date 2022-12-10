@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarUserComponent } from './navbar-user/navbar-user.component';
 import { SearchBookComponent } from './search-book/search-book.component';
+import { ViewUserComponent } from './view-user/view-user.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -60,6 +61,10 @@ const myRoute:Routes=[
   {
     path:"searchbook",
     component:SearchBookComponent
+  },
+  {
+    path:"viewuser",
+    component:ViewUserComponent
   }
 ]
 @NgModule({
@@ -77,6 +82,7 @@ const myRoute:Routes=[
     NavbarComponent,
     NavbarUserComponent,
     SearchBookComponent,
+    ViewUserComponent,
     
   ],
   imports: [
