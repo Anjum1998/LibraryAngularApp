@@ -28,7 +28,7 @@ constructor(private api:ApiService,private router:Router){}
           alert("invalid")
         } else {
           this.searchUser=response;
-          this.router.navigate(['/view'])
+          this.router.navigate(['/viewuser'])
         }
       }
     )
